@@ -18,9 +18,9 @@ const showData = (data) => {
             <td><img src="${image}" width="20px" height="20px"/> <p id="name">${name}</p></td>
             <td>${symbol.toUpperCase()}</td>
             <td>$${current_price.toLocaleString('en-US')}</td>
-            <td>Mkt Cap: $${total_volume.toLocaleString('en-US')}</td>
+            <td>$${total_volume.toLocaleString('en-US')}</td>
             <td class="percentage">$${price_change_percentage_24h}</td>
-            <td>$${market_cap.toLocaleString('en-US')}</td>
+            <td>Mkt Cap: $${market_cap.toLocaleString('en-US')}</td>
         `
 
         table.appendChild(row)
