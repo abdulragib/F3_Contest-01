@@ -19,7 +19,7 @@ const showData = (data) => {
             <td>${symbol.toUpperCase()}</td>
             <td>$${current_price.toLocaleString('en-US')}</td>
             <td>$${total_volume.toLocaleString('en-US')}</td>
-            <td class="percentage">$${price_change_percentage_24h}</td>
+            <td class="percentage">${price_change_percentage_24h}%</td>
             <td>Mkt Cap: $${market_cap.toLocaleString('en-US')}</td>
         `
 
