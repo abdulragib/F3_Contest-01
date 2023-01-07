@@ -10,18 +10,20 @@ const showData = (data) => {
   data.then(
     (item) => {
         item.forEach((value) => {
-        const {name, image, symbol, current_price,price_change_percentage_24h,total_volume} = value
+        const {name, image, symbol, current_price, price_change_percentage_24h, market_cap, total_volume} = value
+
         const table = document.getElementById('table')
         const row = document.createElement('tr');
         row.innerHTML = ` 
             <td><img src="${image}" width="20px" height="20px"/> <p id="name">${name}</p></td>
             <td>${symbol.toUpperCase()}</td>
             <td>$${current_price.toLocaleString('en-US')}</td>
-            <td class="percentage">$${price_change_percentage_24h}</td>
             <td>Mkt Cap: $${total_volume.toLocaleString('en-US')}</td>
+            <td class="percentage">$${price_change_percentage_24h}</td>
+            <td>$${market_cap.toLocaleString('en-US')}</td>
         `
-        table.appendChild(row)
 
+        table.appendChild(row)
         })
 
         const collection = document.getElementsByClassName("percentage");
@@ -34,6 +36,7 @@ const showData = (data) => {
                 collection[i].style.color = "green";
             }
         }
+        
     }
   )
 }
